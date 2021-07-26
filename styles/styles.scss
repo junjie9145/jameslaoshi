@@ -182,8 +182,6 @@ nav {
     background-color: $dark-color;
     .videowrap {
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
     .current-vid {
         margin: 15px;
@@ -191,6 +189,8 @@ nav {
         height: 100vh;
     }
     .vid-discription {
+        margin: 5px;
+        padding: 5px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -391,13 +391,36 @@ footer {
     .burger {
         display: block;
         cursor: pointer;
-        
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    .videowrap {
+        display: flex;
+        flex-direction: column;
     }
 }
 
-.nav-active {
-    transform: translateX(0%);
-}
+// @media screen and (max-width: 500px) {
+//     .slide-content {
+//         bottom: 300px;
+//         left:0;
+//         opacity: 0;
+//         width: 100%;
+//     }
+
+//         .slide.current {
+//             opacity: 1;
+//             .slide-content {
+//                 transform: translateY(-500px);
+//             }
+//         }
+// }
+
+
+
 
 @keyframes navLinkFade{
     from {
