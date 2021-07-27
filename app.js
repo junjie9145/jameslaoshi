@@ -59,7 +59,7 @@ const slider = (() => {
     }
 
     window.addEventListener('load', e=> {
-        autoSlide()
+       autoSlide()
     })
 
     prev.addEventListener('click', e=> {
@@ -83,7 +83,7 @@ const videoList = (() => {
     const videoListContainer = document.querySelector('#video-list');
     const videoTitle = document.querySelector('#video-title');
     const videoDiscrption = document.querySelector('#video-discription');
-    const videoList = document.querySelectorAll('#video-list options')
+    
 
     const videoArray = [
        {
@@ -91,6 +91,11 @@ const videoList = (() => {
             discripttion: "Presentation on the current for of the Bilingual Education Act in the USA. Created for Moreland University's Teach-Now program.",
             video: '<iframe width="718" height="404" src="https://www.youtube.com/embed/eQ7QBaD_37A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         },
+        {
+            title: 'Class Randomizer Video',
+            discription: 'Class randomizer I built using HTML CSS and vanilla Javacript',
+            video: '<iframe width="808" height="404" src="https://www.youtube.com/embed/py5RpycRyyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        }
 
     ]
 
@@ -114,11 +119,16 @@ const videoList = (() => {
         videoDiscrption.textContent = vid.discripttion;
     }
 
-    videoList.forEach((video) => {
-        video.addEventListener('click', loadVideo(video))
-    })
+    const changeVideo = () => {
+        const videoList = document.querySelectorAll('.videoselect')
+        videoList.forEach((video, index) => {
+            video.addEventListener('click', () => {
+                loadVideo(videoArray[index])})
+        })
+    }
 
     loadVideo(videoArray[0]);
+    changeVideo();
 
 })()
 

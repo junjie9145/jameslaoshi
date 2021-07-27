@@ -212,9 +212,19 @@ nav {
 }
 
 #video .current-vid {
-  margin: 15px;
-  padding: 5px;
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 6px;
+  padding-right: 6px;
+  width: 100%;
+}
+
+#video .current-vid iframe, #video .current-vid object, #video .current-vid embed, #video .current-vid video {
+  top: 0;
+  left: 0;
+  width: 900px;
+  height: 500px;
 }
 
 #video .vid-discription {
@@ -223,6 +233,7 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -345,10 +356,14 @@ nav {
 
 #contact {
   background-color: #5D4945;
-  height: 92vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -360,9 +375,7 @@ nav {
 
 #contact .information {
   margin: 20px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  width: 20%;
   font-weight: bold;
   letter-spacing: 2px;
 }
@@ -374,6 +387,8 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 5px;
+  margin: 5px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -385,7 +400,7 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   background-color: #d8d0d0;
-  width: 50%;
+  width: 80%;
   height: 100%;
   border: 3px solid #5D4945;
 }
@@ -418,6 +433,7 @@ nav {
   resize: none;
   width: 300px;
   height: 200px;
+  padding: 3px;
   background-color: transparent;
   color: #5D4945;
   border: 1.5px #5D4945 solid;
@@ -514,6 +530,13 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .current-vid {
+    height: 800px;
+  }
+  .current-vid iframe, .current-vid object, .current-vid embed, .current-vid video {
+    width: 359px !important;
+    height: 202px !important;
   }
 }
 
