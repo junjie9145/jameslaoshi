@@ -88,7 +88,7 @@ const videoList = (() => {
     const videoArray = [
        {
             title: 'Modern Bilingual Education Act',
-            discripttion: "Presentation on the current for of the Bilingual Education Act in the USA. Created for Moreland University's Teach-Now program.",
+            discription: "Presentation on the current for of the Bilingual Education Act in the USA. Created for Moreland University's Teach-Now program.",
             video: '<iframe width="718" height="404" src="https://www.youtube.com/embed/eQ7QBaD_37A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
         },
         {
@@ -116,7 +116,7 @@ const videoList = (() => {
         clear();
         currentVideo.innerHTML = vid.video;
         videoTitle.textContent = vid.title;
-        videoDiscrption.textContent = vid.discripttion;
+        videoDiscrption.textContent = vid.discription;
     }
 
     const changeVideo = () => {
