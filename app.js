@@ -28,7 +28,7 @@ const slider = (() => {
     let slideInterval;
 
     const timeOut = () => {
-        setTimeout((()=> current.classList.remove('current')), 200);
+        setTimeout((()=> current.classList.remove('current')));
     }
 
     const autoSlide = () => {
@@ -83,6 +83,7 @@ const videoList = (() => {
     const videoListContainer = document.querySelector('#video-list');
     const videoTitle = document.querySelector('#video-title');
     const videoDiscrption = document.querySelector('#video-discription');
+    const loadVideoButton = document.querySelector('#loadvideo')
     
 
     const videoArray = [
@@ -99,10 +100,14 @@ const videoList = (() => {
 
     ]
 
+    let arrayIndex = 0
+
     videoArray.forEach(video => {
         const videoButton = document.createElement('option');
         videoButton.classList.add('videoselect');
         videoButton.textContent = video.title;
+        videoButton.setAttribute('value', arrayIndex);
+        arrayIndex++;
         videoListContainer.appendChild(videoButton)
     })
 
@@ -120,12 +125,17 @@ const videoList = (() => {
     }
 
     const changeVideo = () => {
-        const videoList = document.querySelectorAll('.videoselect')
-        videoList.forEach((video, index) => {
-            video.addEventListener('click', () => {
-                loadVideo(videoArray[index])})
-        })
+        videoListContainer.addEventListener('change', function() {
+            console.log(this.value)
+            loadVideo(videoArray[this.value])
+        }
+        )
     }
+        // videoList.forEach((video, index) => {
+        //     video.addEventListener('click', () => {
+        //         loadVideo(videoArray[index])})
+        // })
+
 
     loadVideo(videoArray[0]);
     changeVideo();
