@@ -225,6 +225,23 @@ nav {
     color: $light-color;
 }
 
+#reflection {
+    background-color: $light-color;
+}
+.relectionitem {
+    display: flex;
+    iframe {
+        margin: 3px;
+    }
+    .reflectdis{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
 #cv {
     background-color: $light-color;
     padding: 50px;
@@ -360,6 +377,10 @@ nav {
     }
 }
 
+.recaptcha {
+    background-color: transparent;
+}
+
 #clearbutton {
     border: 1.5px $dark-color solid;
     width: 100px;
@@ -418,7 +439,12 @@ footer {
         iframe, object, embed, video {
             width: 359px !important;
             height: 202px !important;
-        } 
+            } 
+        }
+    .relectionitem {
+        display: flex;
+        flex-direction: column;
+   
     }
 }
 
