@@ -87,7 +87,22 @@ const videoList = (() => {
     
 
     const videoArray = [
-       {
+        {
+            title: 'Clinical Video Three',
+            discription: 'Video demonstrating InTASC standards four and five.',
+            video:'<iframe width="560" height="315" src="https://www.youtube.com/embed/AGBSRXwDKOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        },
+        {
+            title: 'Clinical Video Two',
+            discription: "In this video I was demonstrating how to integrate inTASC standard one, two, and three. This lesson went better than the first.",
+            video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/-VuqXandNIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        },
+        {
+            title: 'First Clinical Video',
+            discription: "This video was a struggle to plan, execute, and edit. It is a bit rough arount the edges but I will have room to grow.",
+            video: '<iframe width="560" height="315" src="https://www.youtube.com/embed/b8qF4rcZl_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+        },
+        {
             title: 'Modern Bilingual Education Act',
             discription: "Presentation on the current for of the Bilingual Education Act in the USA. Created for Moreland University's Teach-Now program.",
             video: '<iframe width="718" height="404" src="https://www.youtube.com/embed/eQ7QBaD_37A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
