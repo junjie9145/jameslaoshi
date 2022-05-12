@@ -230,6 +230,8 @@ nav {
 }
 .relectionitem {
     display: flex;
+    border: 3px black solid;
+    margin-top: 5px;
     iframe {
         margin: 3px;
     }
@@ -241,6 +243,22 @@ nav {
         text-align: center;
     }
 }
+
+.iframewrap {
+    width: 1040px;
+    height: 520px;
+    padding: 0;
+    overflow: hidden;
+    .scaledframe {
+        zoom: 0.75;
+        width: 1040px;
+        height: 500px;
+        border: 0;
+        transform: scale(0.5);
+        transform-origin: 0 0;
+        }
+    }
+
 
 #cv {
     background-color: $light-color;
@@ -430,6 +448,13 @@ footer {
         transform: translateX(0%);
     }
 
+    .slide {
+        .slide-content {
+            width: 100%;
+        }
+
+    }
+
     .videowrap {
         display: flex;
         flex-direction: column;
@@ -444,7 +469,13 @@ footer {
     .relectionitem {
         display: flex;
         flex-direction: column;
-   
+        iframe {
+            width:359px !important;
+            height: 202px !important;
+        }
+    }
+    .iframewrap {
+        display: none;
     }
 }
 
